@@ -1,26 +1,70 @@
-# Web Calculator using React
+# Getting Started with Create React App
 
-Welcome to our web calculator project! Your first task is to build a web calculator using React. In this README.md file, I'll give you an overview of the project and what is expected from you.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Project Overview
-The project is a simple web calculator that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator should have a user-friendly interface and be responsive to different screen sizes. The main goal of this project is to introduce you to the basics of React and give you hands-on experience in building a simple web application.
+## Available Scripts
 
-## Project Requirements
-The following are the requirements for the web calculator project:
+In the project directory, you can run:
 
-The calculator should have a user-friendly interface with clear and easy-to-read buttons and displays.
-The calculator should perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
-The calculator should handle decimal numbers.
-The calculator should be responsive to different screen sizes.
-The calculator should have clear and easy-to-understand code.
+### `npm start`
 
-## Getting Started
-If you're new to React, I recommend that you first go through the official React documentation, especially [quick start guide](https://react.dev/learn). 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Once you have a basic understanding of React, you can start working on the web calculator project. I recommend that you use [Create React App](https://create-react-app.dev/) to create a new React project. Create React App is a tool that helps you set up a new React project quickly and easily.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Submission
-Besides completed task, submit a brief report describing your approach to the project, any challenges you faced, and how you overcame them.
+### `npm test`
 
-## Conclusion
-I hope that this project will be a valuable learning experience for you. If you have any questions or concerns about the project, feel free to reach out to me (Michal) or to Honza.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
