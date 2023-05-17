@@ -7,6 +7,8 @@ function App() {
     <>
       <Nav />
       <h1>Ahoj</h1>
+      <h1>Nazdar</h1>
+
       <Nav />
     </>
   );
