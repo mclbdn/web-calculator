@@ -1,76 +1,82 @@
-import { useEffect, useState } from 'react';
-import './App.css';
-import { Input } from './components/Input';
-import { addHandler } from './utils/mathOperatorHandlers';
+import { useEffect, useState } from "react";
+import "./App.css";
+import { mathHandler, addHandler } from "./utils/mathOperatorHandlers";
+import { MyButton } from "./components/MyButton";
+import { Input } from "./components/Input";
+import { LABELS } from "./Constants";
 
 function App() {
-  const [test, setTest] = useState(0)
-  const [firstNumber, setFirstNumber] = useState(0);
-  const [secondNumber, setSecondNumber] = useState(0);
-  const [operator, setOperator] = useState("");
-  const [result, setResult] = useState(0);
+  const [test, setTest] = useState(0);
+  const [finalResult, setFinalResult] = useState(0)
+  const [firstNumber, setFirstNumber] = useState(undefined);
+  const [secondNumber, setSecondNumber] = useState(undefined);
+  const [operator, setOperator] = useState(undefined);
+  
+  const [isBtnDisabled, setisBtnDisabled] = useState(true);
 
-  const addHandler = () => {
-    setResult(Number(firstNumber) + Number(secondNumber));
+  const onButtonClickHandler = () => {
+    console.log("I was clicked!");
   };
 
+  // useEffect(()=>{console.log(finalResult)},[finalResult])
 
-  const subHandler = () => {
-    setResult(Number(firstNumber) - Number(secondNumber));
-  };
-  const divHandler = () => {
-    setResult(Number(firstNumber) / Number(secondNumber));
-  };
-  const mulHandler = () => {
-    setResult(Number(firstNumber) * Number(secondNumber));
-  };
-
-  const myHandler = (event) => {
-    console.log(event.target.id)
-    setTest(event.target.value)
-    console.log(event.target)
-
-  }
+  useEffect(() => {
+    // console.log(secondNumber);
+    if (!isNaN(firstNumber) && !isNaN(secondNumber && secondNumber==! null && firstNumber==! null )) {
+      setisBtnDisabled(false);
+    }
+  }, [secondNumber, firstNumber]);
 
   return (
     <>
-      <input type="text" value={test} onChange={myHandler} id='thisisid' />
+      <h1 className="text">{LABELS.FIRST_NUMBER}</h1>
+      <Input
+        type="number"
+        value={firstNumber}
+        onChange={setFirstNumber}
+        id={"myFirstNumber"}
+      />
 
-      {/* <h1 class="text">First number</h1>
-       <Input id="firstNum" o/> 
+      <h1 className="text">{LABELS.SECOND_NUMBER}</h1>
 
+      <Input
+        type="number"
+        value={secondNumber}
+        onChange={setSecondNumber}
+        id={"mySecondNumber"}
+      />
 
+      <div id="buttonsWrapper">
+        <MyButton
+          className="operator"
+          onClick={()=>setFinalResult(mathHandler(firstNumber, secondNumber, "+"))}
+          disabled={isBtnDisabled}
+          title="+"
+        />
 
-      
-      <Input type="string" value={operator} onChange={setOperator} i={"myInput"} />
-      
-      <h1 style={{color:"white"}}>{operator}</h1>
+        <MyButton
+          className="operator"
+          onClick={()=>setFinalResult(mathHandler(firstNumber, secondNumber, "-"))}
+          disabled={isBtnDisabled}
+          title="-"
+        />
 
-       <h1 class="text">Second number</h1>
-      <Input id="operator" /> 
+        <MyButton
+          className="operator"
+          onClick={()=>setFinalResult(mathHandler(firstNumber, secondNumber, "*"))}
+          disabled={isBtnDisabled}
+          title="*"
+        />
 
-      <br></br>
-       <Button id="secondNum" /> 
-      <button >Submit</button > */}
-
-      <h1 className="text">First number</h1>
-      <Input type="number" value={firstNumber} onChange={setFirstNumber} id={"myFirstNumber"} />
-
-
-
-      <h1 className="text">Second number</h1>
-      <Input type="number" value={secondNumber} onChange={setSecondNumber} id={"mySecondNumber"} />
-
-      <button onClick={addHandler} type="button" className="myButton">+</button>
-      <button onClick={subHandler} type="button" className="myButton">-</button>
-      <button onClick={divHandler} type="button" className="myButton">/</button>
-      <button onClick={mulHandler} type="button" className="myButton">*</button>
-      {/* <h1>{result}</h1> */}
-      {/* <h1>{result} ks</h1> */}
-      <h1>{result > 3 ? "větší jak 3" : "menší jak 3"}</h1>
+        <MyButton
+          className="operator"
+          onClick={()=>setFinalResult(mathHandler(firstNumber, secondNumber, "/"))}
+          disabled={isBtnDisabled}
+          title="/"
+        />
+      </div>
+      <h1>{finalResult}</h1>
     </>
-
-
   );
 }
 

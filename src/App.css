@@ -22,3 +22,16 @@ body{
   min-width: 20px;
   min-height: 20px;
 }
+
+
+#buttonsWrapper {
+  display: flex;
+  
+}
+
+.operator{
+  margin: 10px;
+  min-width: 30px;
+  min-height: 30px;
+
+}
